@@ -1,0 +1,28 @@
+html {
+  font-size: 16px;
+  max-width: 1024px;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+}
+
+.logo-name {
+  display: flex;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+}
+
+.banner {
+  background-color: lightgrey;
+}
+
+.banner img {
+  width: 60%;
+}
