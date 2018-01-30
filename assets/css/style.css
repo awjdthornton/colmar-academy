@@ -1,20 +1,72 @@
-html {
+
+/*
+Color scheme from https://material.io/color/#!/?view.left=0&view.right=0&primary.color=A1887F&secondary.color=7CB342&primary.text.color=000000
+Primary -> #bcaaa4, light #efdcd5, dark #8c7b75
+Secondary -> #7cb342, light #aee571, dark #4b830d
+
+All text except links is #000000 (black)
+
+Link text #0277bd
+*/
+
+/* latin */
+
+@font-face {
+  font-family: 'Oxygen Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oxygen Mono'), local('OxygenMono-Regular'), url(https://fonts.gstatic.com/s/oxygenmono/v5/BzV4DVOwAgGelLT9EC5xyogp9Q8gbYrhqGlRav_IXfk.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
+/* latin */
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/cJZKeOuBrn4kERxqtaUH3ZBw1xU1rKptJj_0jans920.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/k3k702ZOKiLJc3WVjuplzBampu5_7CjHW5spxoeN3Vs.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
+/* General */
+body {
+  /* font-family: 'Oxygen Mono', monospace; */
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.2;
+  background-color: #efdcd5;
   font-size: 16px;
   max-width: 1024px;
   margin: auto;
-  color: rgb(78, 78, 78);
+  color: #000000;
 }
 
 h1 {
+  font-family: 'Oxygen Mono', monospace;
   font-size: 2rem;
   font-weight: bold;
 }
 
 h3 {
+  font-family: 'Oxygen Mono', monospace;
   font-size: 1.25rem;
   font-weight: bold;
 }
 
+a {
+  color: #0277bd;
+}
+
+/* Header */
 header {
   display: flex;
   justify-content: space-between;
@@ -26,56 +78,80 @@ header {
   display: flex;
   align-items: center;
 }
+
+.logo-name span {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+#academy {
+  color: #8c7b75;
+}
+
+nav {
+  padding-right: .5rem;
+}
+
 nav ul {
   display: flex;
 }
 
+nav ul li {
+  padding-right: 1rem;
+}
+
+/* Banner */
 .banner {
-  background-color: rgba(211, 211, 211, 0.5);
+  background-color: #bcaaa4;
   display: flex;
 }
 
 .banner-image {
-    margin: 2rem 1.5rem;
-    width: 60%
+  margin: 2rem 1.5rem;
+  width: 60%
 }
 
 .banner-image img {
   width: 100%;
   /* align-self: center; */
-
 }
 
 .banner-info {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   width: 40%;
-  align-self: center;
 }
 
 .banner-text {
-  width: 60%;
+  width: 80%;
+  margin: 1rem;
 }
-.banner-text > * {
-  margin-bottom: 2rem;
-}
+
 
 .banner-text p {
   font-size: 1.25rem;
 }
 
-.start-button {
-  color: white;
-  background-color: rgb(78, 78, 78);
-  text-align: center;
+.banner-text > * {
+  padding-bottom: 1rem;
 }
 
-.start-button p {
+.start-button {
+  display: block;
+  color: white;
+  background-color: #4b830d;
+  text-align: center;
+  transition: background-color 200ms ease;
   padding: .5rem 0;
   font-size: 1.25rem;
 }
 
+.start-button:active {
+  background-color: #7cb342;
+}
+
+/* Information */
 .information {
   display: flex;
   justify-content: center;
@@ -83,28 +159,32 @@ nav ul {
 
 .information-main {
   width: 60%;
-  padding: 2rem 1.5rem;
+  margin: 2rem 1.5rem 0 1.5rem;
 }
 
 .information-main img {
   width: 100%;
 }
 
+.information-text {
+  margin: 2rem 0;
+}
+
+.information-text > * {
+  margin-bottom: 1rem;
+}
+
 .information-secondary {
   display: flex;
   flex-direction: column;
-  border-left: .1rem solid rgba(211, 211, 211, 0.5);
+  border-left: .1rem solid #bcaaa4;
   width: 40%;
-  padding: 1rem 0;
-}
-
-.information-secondary a {
-  color: lightblue;
+  margin: 1rem 0;
 }
 
 .information-item {
   display: flex;
-  border-bottom: rgba(211, 211, 211, 0.5) .25rem solid;
+  border-bottom: #bcaaa4 .1rem solid;
   padding: 1rem;
 }
 
@@ -121,10 +201,10 @@ nav ul {
   padding-right: 1rem;
 }
 
-.information-item div > * {
+.information-item div>* {
   padding-bottom: .5rem;
 }
 
 .information-item:last-child {
-  background-color: rgba(211, 211, 211, 0.5);
+  background-color: #bcaaa4;
 }
