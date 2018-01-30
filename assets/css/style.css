@@ -3,9 +3,8 @@
 Color scheme from https://material.io/color/#!/?view.left=0&view.right=0&primary.color=A1887F&secondary.color=7CB342&primary.text.color=000000
 Primary -> #bcaaa4, light #efdcd5, dark #8c7b75
 Secondary -> #7cb342, light #aee571, dark #4b830d
-
-All text except links is #000000 (black)
-
+Backgrounds -> white #fff , light gray #F5F5F6, slightly darker gray #E1E2E1 | Note that I had to use color picker to get these as for some reason the Material Design Color Tool doesn't give them.
+All text except non-nav links is #000000 (black)
 Link text #0277bd
 */
 
